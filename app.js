@@ -7,11 +7,14 @@ var goats = []; // Vinicio - this is an empty array
 // Vinicio - this clicks all of them
 var totalClicks = 0;
 
+
+// Gabriel - Why does this code look familiar? Is this the same idea behind random guesses?
 function getRandomGoatNumber() {
   var randomNumber = Math.floor(Math.random() * goats.length);
   return randomNumber;
 }
 
+// Gabriel - If this is outside of the function does this make this a local variable or global?
 var previousIndex = -1;
 
 // Vinicio - this function 'belogs' to ALL the goats
@@ -25,6 +28,7 @@ function renderRandomGoat() {
   var randomIndex = getRandomGoatNumber();
 
   // Vinicio - keep getting new random values UNTIL I get an unique one
+  // Gabriel - Why does this code work?
   console.log(`Previous: ${previousIndex}`);
   while(randomIndex === previousIndex) {
     randomIndex = getRandomGoatNumber();
